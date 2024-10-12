@@ -1,0 +1,75 @@
+.body {
+    font-family: Arial, sans-serif;
+    display: block;
+    height: 100vh;
+    width: 100vw;
+
+    /*background-image:url(../CSS/signupbg.webp);*/
+    /* Adjust to your needs */
+}
+
+.tray , .container-login{
+    background-color: burlywood;
+}
+
+
+.body .tray {
+    display: inline-block;
+    background-color: #f7f7f7;
+    height: calc(100% - 150px);
+    width: 100%;
+}
+.body .tray .container-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: clamp(300px,20%,80%);
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+.usertype {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: fit-content;
+    width: fit-content;
+}
+.tray .container-login h1 {
+    text-align: center;
+
+}
+input[type="email"], input[type="password"], input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+input[type="email"]:hover, input[type="password"]:hover {
+    border-color: #bebcbc;
+}
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+a {
+    color:#4caf50;
+    text-decoration: none;
+    font-size: 15px;
+    font-style: normal;
+}
+
+.tray .container-login a:hover {
+    color:green;
+}

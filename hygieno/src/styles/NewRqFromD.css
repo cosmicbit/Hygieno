@@ -1,0 +1,16 @@
+.CASection{
+    .table-container{
+        .table-body{
+            .custom-table{
+                tbody{
+                    
+                    tr:hover{
+                        color: brown;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

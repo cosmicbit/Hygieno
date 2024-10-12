@@ -1,0 +1,16 @@
+
+.search-bar{
+    display:flex;
+    justify-content: space-between;
+    padding: none;
+    margin: none;
+    height: 100%;
+}
+.search-box{
+    height: 100%;
+    margin: none;
+}
+.search-button{
+    margin:20px;
+    height:100%;
+}

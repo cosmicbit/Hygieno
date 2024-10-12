@@ -1,0 +1,14 @@
+.collectorhome {
+    display: flex;
+    justify-content: space-between; /* Use flexbox layout */
+    height: 100vh; /* Make the layout take up the full viewport height */
+    background-color: #f0f0f0;
+    width: 100vw;
+    
+    .main-content {
+        display:flex;
+        flex-direction: column;
+        width: 80%; /* Allow the main content to take up remaining space */
+        margin: 2%;
+    }
+} 

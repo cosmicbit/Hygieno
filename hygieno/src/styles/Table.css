@@ -1,0 +1,63 @@
+.table-container {
+  position: relative;
+  max-height: 500px;/* Set a fixed height for the table container */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+ 
+}
+.table-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffff; /* Add a background color for the header */
+}
+.table-body {
+  overflow-x: auto;
+}
+
+.custom-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .custom-table th,
+  .custom-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .custom-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .pagination button:hover {
+    background-color: #45a049;
+  }
+  
+  .pagination button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination span {
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  

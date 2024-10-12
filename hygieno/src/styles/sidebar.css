@@ -1,0 +1,33 @@
+.sidebar {
+    width: 15%;
+    height: 90%;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 10px; /* Curve the bottom-right corner */
+    padding: 20px;
+    margin-left: 2%;
+    margin-top: 2%;
+  }
+  
+  .sidebar-header {
+    padding: 20px;
+  }
+  
+  .sidebar-menu {
+    padding: 10px;
+  }
+  
+  .sidebar-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar-menu ul li {
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  
+  .sidebar-menu ul li:hover {
+    background-color: #555;
+  }
+  

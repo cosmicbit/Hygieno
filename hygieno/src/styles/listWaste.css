@@ -1,0 +1,224 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .services {
+    margin-top: 5px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3dacf;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    
+  }
+
+  input[type="file"]{
+    color: rgba(0, 0, 0, 0);
+    width:100px;
+  }
+  input[type="file"]::-webkit-file-upload-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   }
+  .wasteMenuContainer {
+    position: relative;
+    margin: 10px;
+    width: 75%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+  .wasteImageContainer{
+    display: none;
+  }
+ 
+  .wasteImageContainer.active{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30% 1fr 40px 40px ;
+    height: auto;
+}
+
+  .wasteType{
+    display: none;
+  }
+  .wasteType.active{
+    display: block;
+  }
+
+   h3 {
+    font-size: clamp(20px, 2.5vw, 48px);
+  }
+  
+  .wasteTypesOption {
+    display: flex;
+    height: 30%;
+    gap: 30px;
+    flex-wrap: wrap;
+    
+  }
+
+  .wasteTypesOption button{
+    background-color: rgb(255, 255, 255);
+    font-size: clamp(20px, 1.5vw, 48px);
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 10px;
+  }
+
+  .green{
+    border-style:solid;
+    border-color: greenyellow;
+  }
+
+  .nextIcon{
+    position: absolute;
+    transform: scale(3);
+    left: 95%;
+    bottom: 18%;
+    transition: transform 0.2s ease-in-out;
+    &:hover{
+        transform: scale(4);
+        cursor: pointer;
+
+    }
+  }
+
+ 
+
+  .nextIconImage{
+   grid-row: 4/5;
+   grid-column: 6/7;
+   justify-self:center ;
+   align-self: flex-end;
+   transform: scale(3);
+    transition: transform 0.2s ease-in-out;
+    &:hover{
+        transform: scale(4);
+        cursor: pointer;
+    }
+  }
+  .backIcon {
+    grid-row: 4/5;
+    grid-column:1/2;
+    justify-self:flex-start ;
+    align-self: flex-end;
+    transform: scale(3) rotate(180deg); 
+    transition: transform 0.2s ease-in-out;
+
+  }
+  
+  .backIcon:hover{
+    transform: scale(4) rotate(180deg); 
+    cursor: pointer;
+
+}
+
+.wasteImgFile{
+  position: relative;
+  grid-row:3/4;
+  grid-column:1/2;
+  justify-self: flex-start;
+  align-self: flex-end;
+}
+
+.wasteImageContainer .selectedWastePreview{
+    position: relative;
+    grid-row: 2/3;
+    grid-column:1/4;
+    align-self:center;
+    width: 50%;
+}
+
+.wastePreview{
+  position: relative;
+  grid-row: 2/3;
+  grid-column:1/4;
+  align-self:center;
+  width: 50%;
+}
+
+.findCollectors{
+    display: none;
+}
+.findCollectors.active{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+
+}
+
+.findCollectors h3 , .wasteType h3 {
+  background-color: #6A816A;
+  padding: 20px;
+  border-radius: 10px;
+}
+.collectorDetails{
+  padding: 20px;
+  margin-top: 5px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000000;  /* Adjust color as needed */
+  border-radius: 10px;
+}
+
+.findCollectors .collectorDetails h4{
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+}
+
+.collectorDetails.green{
+  border-color: chartreuse;
+}
+
+.backIconC{
+  position: relative;
+  top: 25px;
+  transform: scale(3) rotate(180deg);
+  &:hover{
+            cursor: pointer;
+
+  }
+}
+
+.submitC{
+  
+  align-self: flex-end;
+  background-color: #d3ddd4;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.wasteImageContainer h3{
+  position: relative;
+  background-color: #6A816A;
+  padding: 20px;
+  border-radius: 10px;
+  grid-row: 1/2;
+  grid-column: 1/7;
+  align-self:flex-start;
+}
+
+@media only screen and (min-width: 601px){
+  .wastePreview{
+    position: relative;
+    grid-row: 2/3;
+    grid-column:1/4;
+    align-self:center;
+    width: 30%;
+  }
+}

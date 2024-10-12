@@ -1,0 +1,193 @@
+/*Phone*/
+@media only screen and (max-width: 600px) {
+    .waste-card {
+        margin-top: 5px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        border: 1px solid #fffefe;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        margin-bottom: 5px;
+        font-size: small;
+
+        img{
+            width: 100vw;
+            object-fit:contain;
+            height: 15vh;  
+        }
+      }
+    
+      .waste-card .contentWaste{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    
+      .contentWaste.hide{
+        display: none;
+      }
+
+      #main{
+        font-weight: bold;
+        }
+    
+    .left-content{
+        position: relative;
+        width: 40%;
+        left: 4%;
+    }
+    
+     .right-content{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        
+        .icons{
+            display: flex;
+            width: 3.5rem;
+            background-color: rgb(255, 255, 255);
+            justify-content: space-between;
+            gap: 5px;
+            margin-bottom: 10px;
+    
+            .ico{
+                width: 20px;
+                height: 20px;
+                transition: transform .2s ease-in-out;
+                
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.2);
+                }
+            }
+        }
+     }
+}
+/*Laptop and all*/
+@media only screen and (min-width: 601px){
+.waste-card {
+    margin-top: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #fffefe;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+    &:hover{
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: #ffffff;
+    }
+
+    img{
+        width: 100vw;
+        object-fit:contain;
+        height: 20vh;  
+    }
+
+  }
+
+  .waste-card .contentWaste{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .waste-card .contentWaste.makeBackground{
+    justify-content: space-around;
+
+  }
+  .contentWaste.hide{
+    display: none;
+  }
+
+  #main{
+    font-weight: bold;
+    }
+
+.left-content{
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    left: 4%;
+}
+
+.statusDetails ,.delete{
+    display: flex;
+    position: relative;
+    right: 50px;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.hide{
+    display: none;
+}
+    .icons{
+        display: flex;
+        width: 3.5rem;
+        background-color: rgb(255, 255, 255);
+        justify-content: center;
+
+        gap: 5px;
+        margin-bottom: 10px;
+
+        .ico{
+            width: 20px;
+            height: 20px;
+            transition: transform .2s ease-in-out;
+            
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    button{
+        padding: 5px;
+        border-radius: 5px;
+    }
+    #cancel-bT{
+        &:hover{
+            cursor: pointer;
+            background-color: rgb(20, 138, 36);
+            opacity: 0.8;
+        }
+    }
+
+    #delete-bT{
+        &:hover{
+            cursor: pointer;
+            background-color: rgb(203, 18, 18);
+            opacity: 0.8;
+        }
+    }
+
+    .defaultViewContainer {
+        display: flex;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+
+        h2{
+            color: rgb(122, 26, 26);
+            position: absolute;
+            top:18vh;
+            right: 30vw;
+        }
+    }
+    
+    
+    
+
+ }
+
+
+  
