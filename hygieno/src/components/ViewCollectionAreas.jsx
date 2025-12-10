@@ -8,7 +8,7 @@ import '../styles/Table.css';
     useEffect( () => {
         //implement passing session id to fetch waste orders to have increased security later
         async function fetchCollectionAreas() {
-          const res = await fetch(`http://localhost:5656/collectionAreaRequests?id=${props.state._id}`, {
+          const res = await fetch(`${process.env.REACT_APP_URL}:5656/collectionAreaRequests?id=${props.state._id}`, {
           method: 'GET'
           });
           const response = res.json();

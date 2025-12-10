@@ -14,7 +14,7 @@ export let dNewWaste;
 function WasteCard() {
 
 useEffect( ()=> {
-    const socket = io('http://localhost:5656');
+    const socket = io(`${process.env.REACT_APP_URL}:5656`);
     
     if(socket)
     {
@@ -101,7 +101,7 @@ useEffect( ()=> {
     console.log("Wastedetails -->",tempWDetails);
     const wDelAuth = [tempWDetails[index].userId , tempWDetails[index]._id];
     console.log(wDelAuth);
-    const res = await fetch(`http://localhost:5656/deleteWasteRequest`, {
+    const res = await fetch(`${process.env.REACT_APP_URL}:5656/deleteWasteRequest`, {
         method: 'POST',
         headers:{
             'Content-Type':'application/json'

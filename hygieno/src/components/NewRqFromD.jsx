@@ -13,7 +13,7 @@ function NewRqFromD(props){
 
   //implement passing session id to fetch waste orders to have increased security later
   async function fetchNewRqFromD() {
-    const res = await fetch(`http://localhost:5656/getNewRqFromD?id=${props.state._id}`, {
+    const res = await fetch(`${process.env.REACT_APP_URL}:5656/getNewRqFromD?id=${props.state._id}`, {
       method: 'GET'
     });
     const response = res.json();

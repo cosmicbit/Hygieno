@@ -106,7 +106,7 @@ function AddItemsC() {
       
       console.log(collectionAreaData);
       
-      await fetch('http://localhost:5656/collectionAreaRequests',{
+      await fetch(`${process.env.REACT_APP_URL}:5656:5656/collectionAreaRequests`,{
         method:'POST',
         body:collectionAreaData
       })

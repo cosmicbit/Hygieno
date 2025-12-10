@@ -19,46 +19,52 @@ function Login() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
     usertype:''
   });
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+    
+        const handleSubmit = async (event) => {
+        event.preventDefault();
 
-    const response = await fetch('http://localhost:5656/login', {
-        method: 'POST',
-        body: JSON.stringify(formData), 
-        headers: { 'Content-Type': 'application/json' },
-    });
+          alert(process.env.REACT_APP_URL);
+        const response = await fetch(`${process.env.REACT_APP_URL}:5656/login`, {
+            method: 'POST',
+            body: JSON.stringify(formData), 
+            headers: { 'Content-Type': 'application/json' },
+        });
+    
+        if (response.ok) {
+            const data = await response.json();
+            console.log('Success man:', data.status);
+            if( data[0].status === 200 )
+            {
+              setLogin = true;
+              sessionStorage.setItem('isLogin','true');
+              if (data[0].usertype === 'Disposer') {
+                sessionStorage.setItem('isLoginD','true');
+                navigate('/pages/disposerHome' , {state : data[1]});
+              } 
+              else {
+                sessionStorage.setItem('isLoginC','true');
+                navigate('/pages/collectorHome', {state : data[1]});
+              }
+            }
+            else{
+              
+            }
+            alert(data[0].message);
+        } 
+        else {
+          console.error('Error:', response.status, response.statusText);
+        }    
+   
+    }
+    
 
-    if (response.ok) {
-        const data = await response.json();
-        console.log('Success man:', data.status);
-        if( data[0].status === 200 )
-        {
-          setLogin = true;
-          sessionStorage.setItem('isLogin','true');
-          if (data[0].usertype === 'Disposer') {
-            sessionStorage.setItem('isLoginD','true');
-            navigate('/pages/disposerHome' , {state : data[1]});
-          } 
-          else {
-            sessionStorage.setItem('isLoginC','true');
-            navigate('/pages/collectorHome', {state : data[1]});
-          }
-        }
-        else{
-          
-        }
-        alert(data[0].message);
-    } 
-    else {
-      console.error('Error:', response.status, response.statusText);
-    }    
-};
 
 const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });

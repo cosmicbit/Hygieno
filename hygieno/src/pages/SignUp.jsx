@@ -68,15 +68,20 @@ function SignUp() {
         alert("Enter a valid phone number");
         return false;
       }
+      else
+        return true;
     }
 
 
     const handleSubmit = async (event) => {
       event.preventDefault();
-      if(!validatePassword() || !validatePhone())
+      if(!validatePassword() || !validatePhone()){
+        alert("no");
         return false;
+      }
 
-      const response = await fetch('http://localhost:5656/signup', {
+      alert("okk");
+      const response = await fetch(`${process.env.REACT_APP_URL}:5656/signup`, {
           method: 'POST',
           body: JSON.stringify(formData), 
           headers: { 'Content-Type': 'application/json' },

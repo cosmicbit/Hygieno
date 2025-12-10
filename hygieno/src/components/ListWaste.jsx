@@ -87,7 +87,7 @@ function ListWaste() {
     }
     
     console.log(state);
-    const url = "http://localhost:5656/findCollectors";
+    const url = `${process.env.REACT_APP_URL}:5656/findCollectors`;
     const response = await fetch(url,{
       method:"POST",
       body:JSON.stringify(state.location),
